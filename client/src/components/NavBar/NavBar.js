@@ -9,10 +9,10 @@ function NavBar() {
   return (
     <div className="navbar">
             <div className="nav-logo">
-                <Link to='/' className="nav-logo">MOTORQ</Link>
+                <Link to='/main' className="nav-logo">MOTORQ</Link>
             </div>
             <div className='nav-item'>
-                <Link to='/' className='nav-item'>Dashboard</Link>
+                <Link to='/main' className='nav-item'>Dashboard</Link>
             </div>
             <div className='nav-item'>
                 <Link to='/vehicles' className='nav-item'>Vehicles</Link>
