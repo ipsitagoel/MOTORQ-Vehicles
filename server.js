@@ -59,8 +59,8 @@ app.get('/vehicles', (req,res) => {
     var data = [];
     var totalLength;
     vehicleModel.find( (err,log) => {
-        for(let i = 0; i<log.length;i++) data.push(log[i]);
-        totalLength = data.length;
+        {/*for(let i = 0; i<log.length;i++) data.push(log[i]);*/}
+        totalLength = log.length;
         let toSendData = []
         let givenVin = req.query.vin ? true : false;
         let givenCount = req.query.count ? true : false;
@@ -68,20 +68,22 @@ app.get('/vehicles', (req,res) => {
         let givenPlate = req.query.plate ? true : false;
         if(givenCount === true){
             for(let i = 0 ; i < req.query.count ; i++){
-                toSendData.push(data[i])
-                
+                toSendData.push(log[i])
+
             }
         }
-        for(let i = 0 ; i < data.length ; i++){
-            if(givenVin === true && data[i].vin === req.query.vin) toSendData.push(data[i])
-            if(givenDriver === true && data[i].Driver === req.query.driver) toSendData.push(data[i])
-            if(givenPlate === true && data[i].LicencePlate === req.query.plate) toSendData.push(data[i])
+        for(let i = 0 ; i < log.length ; i++){
+            if(givenVin === true && log[i].vin === req.query.vin) toSendData.push(log[i])
+            if(givenDriver === true && log[i].Driver === req.query.driver) toSendData.push(log[i])
+            if(givenPlate === true && log[i].LicencePlate === req.query.plate) toSendData.push(log[i])
         }
-        if(givenVin === false && givenCount === false && givenDriver === false && givenPlate === false) toSendData = data
+        if(givenVin === false && givenCount === false && givenDriver === false && givenPlate === false) 
+            for(let i = 0; i<log.length;i++) toSendData.push(log[i]);
         res.json({ 'vehicles' : toSendData, 'noOfEntries': totalLength });
     } )
-    
+
 })
+
 
 app.patch('/vehicles/:id', (req,res) => {
     console.log(req.body)
