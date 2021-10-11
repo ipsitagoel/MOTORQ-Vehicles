@@ -1,3 +1,4 @@
+import path from "path";
 import express from 'express';
 const app = express();
 import cors from "cors";
@@ -95,7 +96,6 @@ app.patch('/vehicles/:id', (req,res) => {
 
 if(process.env.NODE_ENV == 'production'){
     app.use(express.static("./client/build"));
-    import path from "path";
     app.get('*',(req,res) => {
         res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html')
     );
