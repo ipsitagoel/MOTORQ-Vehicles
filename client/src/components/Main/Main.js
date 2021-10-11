@@ -19,7 +19,7 @@ function Main() {
   const [dataFetch, updateDataFetch] = useState([]);
   const [val, updateVal] = useState(0);
   useEffect(() => {
-    fetch("http://localhost:5000/vehicles").then((res) =>
+    fetch("https://motorq-vehicles.herokuapp.com/vehicles").then((res) =>
       res.json().then((result) => updateDataFetch(result.vehicles))
     );
     console.log(dataFetch);

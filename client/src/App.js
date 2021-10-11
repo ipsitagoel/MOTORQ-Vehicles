@@ -8,7 +8,7 @@ function App() {
       <Router>
         <NavBar />
         <Switch>
-          <Route path='/main'>
+          <Route path='/'>
             <Main />
           </Route>
           <Route path='/vehicles'>

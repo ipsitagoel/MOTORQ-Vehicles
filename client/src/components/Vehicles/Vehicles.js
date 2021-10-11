@@ -27,7 +27,7 @@ function Vehicles() {
     const selectSearchRef = useRef(null);
     useEffect(() => {
         console.log('useeffect called')
-        fetch(`http://localhost:5000/vehicles?count=8`)
+        fetch(`https://motorq-vehicles.herokuapp.com/vehicles?count=8`)
         .then(res => res.json().then( (result) => { updateDataFetch(dataFetch.concat(result.vehicles)); updateTotalLength(result.noOfEntries) }))
         console.log(dataFetch)
     },[page]);
@@ -39,7 +39,7 @@ function Vehicles() {
     }
     const callSave = async (vin,licence,driver,customer,office) => {
         let data = { 'vin': vin,'licence': licence, 'driver': driver, 'customer': customer, 'office': office }
-        const response = await fetch("http://localhost:5000/vehicles/"+vin, {
+        const response = await fetch("https://motorq-vehicles.herokuapp.com/vehicles/"+vin, {
             method: 'PATCH',
             mode: 'cors', 
             cache: 'no-cache', 
@@ -58,7 +58,7 @@ function Vehicles() {
     }
     const search = (att,val) => {
         updateSearched(true)
-        fetch(`http://localhost:5000/vehicles?${att}=${val}`)
+        fetch(`https://motorq-vehicles.herokuapp.com/vehicles?${att}=${val}`)
         .then(res => res.json().then( (result) => updateDataFetch(result.vehicles)))
         //console.log(att,val,dataFetch)
     }
