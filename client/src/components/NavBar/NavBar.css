@@ -1,0 +1,56 @@
+.navbar {
+  flex-direction: row;
+  /*background-color: #03071e;*/
+  background-color: rgba(3, 7, 30, 0.5);
+  text-decoration: none;
+  overflow: hidden;
+  margin-bottom: 0;
+}
+
+.nav-logo {
+  float: left;
+  color: #fff;
+  text-align: center;
+  padding: 16px 16px;
+  font-family: sans-serif;
+  font-weight: 800;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.nav-item {
+  float: left;
+  color: #fff;
+  text-align: right;
+  padding: 18px 16px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.nav-item-toggle {
+  margin-top: 17px;
+  color: #fff;
+  text-align: right;
+  padding: 18px 16px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 15px;
+  float: right;
+  cursor: pointer;
+}
+.nav-item-toggle:hover {
+  background-color: #fff;
+  color: black;
+}
+/* Change the color of links on hover */
+.navbar a:hover {
+  background-color: #fff;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.navbar a:active {
+  background-color: #fff;
+  color: black;
+}
