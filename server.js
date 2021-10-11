@@ -52,9 +52,9 @@ var corsOptions = {
   };
 app.use(cors(corsOptions));
 app.use(express.json())
-app.get("/", (req,res) => {
-    res.json({ 'message' : 'this is the dashboard' });
-})
+// app.get("/", (req,res) => {
+//     res.json({ 'message' : 'this is the dashboard' });
+// })
 app.get('/vehicles', (req,res) => {
     var data = [];
     var totalLength;
