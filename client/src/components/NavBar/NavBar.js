@@ -18,7 +18,7 @@ function NavBar() {
                 <Link to='/vehicles' className='nav-item'>Vehicles</Link>
             </div>
             <div onClick={()=>theme.isDarkTheme = !theme.isDarkTheme} className='nav-item-toggle'>
-              {snap.isDarkTheme ? 'black' : 'white'}
+              {snap.isDarkTheme ? 'Light' : 'Dark'}
             </div>
     </div>
   );

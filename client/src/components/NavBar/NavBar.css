@@ -38,6 +38,7 @@
   font-size: 15px;
   float: right;
   cursor: pointer;
+  margin-right: 16px;
 }
 .nav-item-toggle:hover {
   background-color: #fff;

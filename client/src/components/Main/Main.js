@@ -19,7 +19,7 @@ function Main() {
   const [dataFetch, updateDataFetch] = useState([]);
   const [val, updateVal] = useState(0);
   useEffect(() => {
-    fetch("https://motorq-vehicles.herokuapp.com/vehicles").then((res) =>
+    fetch("https://motorq-vehicles.herokuapp.com/api/vehicles").then((res) =>
       res.json().then((result) => updateDataFetch(result.vehicles))
     );
     console.log(dataFetch);
@@ -71,7 +71,7 @@ function Main() {
       </motion.div>
       <button className="update"
         style={{
-          backgroundColor: "#03071e" /* Green */,
+          backgroundColor: "#03071e",
           borderColor: "#F7544D",
           borderRadius: "20px",
           color: "white",

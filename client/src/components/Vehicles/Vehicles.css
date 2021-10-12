@@ -38,6 +38,7 @@
   align-items: center;
   padding: 20px;
   color: white;
+  border-color: #494e53;
 }
 
 .vehicle-table-search-select {
@@ -78,9 +79,17 @@
 }
 
 .vehicle-table-search button {
-  background-color: aliceblue;
-  padding: 10px;
-  font-size: 20px;
+  background-color: #f7544d;
+  border-radius: 20px;
+  border-color: #494e53;
+  color: #FFF;
+  padding: 6px 20px;
+  text-align: center;
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  margin: 10px 20px;
+  cursor: pointer;
 }
 
 .vehicle-table-search-element {
@@ -91,22 +100,44 @@
 }
 
 .vehicle-table-search-element button {
-  background-color: aliceblue;
-  padding: 10px;
-  font-size: 20px;
+  background-color: #f7544d;
+  border-radius: 20px;
+  border-color: #494e53;
+  color: #FFF;
+  padding: 6px 20px;
+  text-align: center;
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  margin: 10px 20px;
+  cursor: pointer;
 }
 
 .vehicle-table-search-element input {
-  background-color: aliceblue;
-  padding: 10px;
-  font-size: 20px;
+  background-color: #03071e;
+  border-color: #F7544D;
+  border-radius: 20px;
+  color: white;
+  padding: 6px 20px;
+  font-size: 12px;
 }
 
 .vehicle-table-element {
-  background-color: rgb(51, 33, 85);
-  border-radius: 5px;
-  border: 1px solid rgb(67, 43, 110);
-  padding: 15px;
-  margin: 5px;
+  background-color: #14173D;
+  border-spacing: 0 50px;
+  column-gap: 100px;
+  padding: 7px;
+  margin: 50px;
   align-items: center;
+  text-align: center;
+}
+
+.vehicle-table-element input{
+  background-color: #03071e;
+  border-color: #494e53;
+  border-radius: 20px;
+  color: #F7544D;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  width: 105px;
 }

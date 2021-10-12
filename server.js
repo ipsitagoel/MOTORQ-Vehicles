@@ -55,7 +55,7 @@ app.use(express.json())
 // app.get("/", (req,res) => {
 //     res.json({ 'message' : 'this is the dashboard' });
 // })
-app.get('/vehicles', (req,res) => {
+app.get('/api/vehicles', (req,res) => {
     var data = [];
     var totalLength;
     vehicleModel.find( (err,log) => {
@@ -85,7 +85,7 @@ app.get('/vehicles', (req,res) => {
 })
 
 
-app.patch('/vehicles/:id', (req,res) => {
+app.patch('/api/vehicles/:id', (req,res) => {
     console.log(req.body)
     vehicleModel.updateOne({vin:{$eq: req.body.vin}},{LicencePlate: req.body.licence, Driver: req.body.driver, CustomerName: req.body.customer, Office: req.body.office},
         function(err,log){

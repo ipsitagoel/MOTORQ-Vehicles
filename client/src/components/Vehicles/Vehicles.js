@@ -27,7 +27,7 @@ function Vehicles() {
     const selectSearchRef = useRef(null);
     useEffect(() => {
         console.log('useeffect called')
-        fetch(`https://motorq-vehicles.herokuapp.com/vehicles?count=8`)
+        fetch(`https://motorq-vehicles.herokuapp.com/api/vehicles?count=8`)
         .then(res => res.json().then( (result) => { updateDataFetch(dataFetch.concat(result.vehicles)); updateTotalLength(result.noOfEntries) }))
         console.log(dataFetch)
     },[page]);
@@ -39,7 +39,7 @@ function Vehicles() {
     }
     const callSave = async (vin,licence,driver,customer,office) => {
         let data = { 'vin': vin,'licence': licence, 'driver': driver, 'customer': customer, 'office': office }
-        const response = await fetch("https://motorq-vehicles.herokuapp.com/vehicles/"+vin, {
+        const response = await fetch("https://motorq-vehicles.herokuapp.com/api/vehicles/"+vin, {
             method: 'PATCH',
             mode: 'cors', 
             cache: 'no-cache', 
@@ -58,7 +58,7 @@ function Vehicles() {
     }
     const search = (att,val) => {
         updateSearched(true)
-        fetch(`https://motorq-vehicles.herokuapp.com/vehicles?${att}=${val}`)
+        fetch(`https://motorq-vehicles.herokuapp.com/api/vehicles?${att}=${val}`)
         .then(res => res.json().then( (result) => updateDataFetch(result.vehicles)))
         //console.log(att,val,dataFetch)
     }
@@ -80,16 +80,16 @@ function Vehicles() {
                 Search using - 
                 <select className='vehicle-table-search-select-inner' ref={selectSearchRef}>
                     <option className='vehicle-table-search-select-element' onClick={()=> updateSelectSearch(selectSearchRef.current.value)}>
-                        count
+                        Count
                     </option>
                     <option className='vehicle-table-search-select-element' onClick={()=> updateSelectSearch(selectSearchRef.current.value)}>
-                        vin
+                        VIN
                     </option>
                     <option className='vehicle-table-search-select-element' onClick={()=> updateSelectSearch(selectSearchRef.current.value)}>
-                        driver
+                        Driver
                     </option>
                     <option className='vehicle-table-search-select-element' onClick={()=> updateSelectSearch(selectSearchRef.current.value)}>
-                        licence
+                        Licence
                     </option>
                 </select>
                 </div>
@@ -111,7 +111,7 @@ function Vehicles() {
             {!searched && <InfiniteScroll dataLength={dataFetch.length} next={fetchMoreData} hasMore={(totalLength >= dataFetch.length)} loader={!searched && <h4>Loading...</h4>} endMessage={<h5 style={{ textAlign: "center" }}>you have seen all</h5>}>
             <table className=''>
             <tr>
-                        <th>Vehicle Identification Number</th>
+                        <th>Vehicle Identification No.</th>
                         <th>Licence Plate</th>
                         <th>Driver</th>
                         <th>Model/Make/Year</th>
@@ -155,7 +155,7 @@ function Vehicles() {
             </InfiniteScroll>}
             { searched && <table className=''>
             <tr>
-                        <th>Vin No.</th>
+                        <th>Vehicle Identification No.</th>
                         <th>Licence Plate</th>
                         <th>Driver</th>
                         <th>Model/Make/Year</th>
