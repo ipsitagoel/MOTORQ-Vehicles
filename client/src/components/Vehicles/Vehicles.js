@@ -109,7 +109,7 @@ function Vehicles() {
             </div>
             <motion.div initial={{opacity:0}} animate={{opacity:1}} transition={{duration: 1.5, delay: dataFetch*0.3}} className='vehicle-table'>
             {!searched && <InfiniteScroll dataLength={dataFetch.length} next={fetchMoreData} hasMore={(totalLength >= dataFetch.length)} loader={!searched && <h4>Loading...</h4>} endMessage={<h5 style={{ textAlign: "center" }}>you have seen all</h5>}>
-            <table className=''>
+            <table className='vehicle-table-inner'>
             <tr>
                         <th>Vehicle Identification No.</th>
                         <th>Licence Plate</th>
@@ -153,7 +153,7 @@ function Vehicles() {
             } )}
             </table>
             </InfiniteScroll>}
-            { searched && <table className=''>
+            { searched && <table className='vehicle-table-inner'>
             <tr>
                         <th>Vehicle Identification No.</th>
                         <th>Licence Plate</th>

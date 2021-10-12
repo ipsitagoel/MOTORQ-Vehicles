@@ -124,7 +124,6 @@
 
 .vehicle-table-element {
   background-color: #14173D;
-  border-spacing: 0 50px;
   column-gap: 100px;
   padding: 7px;
   margin: 50px;
@@ -140,4 +139,8 @@
   padding-top: 5px;
   padding-bottom: 5px;
   width: 105px;
+}
+
+.vehicle-table-inner{
+  border-spacing: 10px;
 }
