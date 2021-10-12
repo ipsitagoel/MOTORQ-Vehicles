@@ -3,6 +3,11 @@ import express from 'express';
 const app = express();
 import cors from "cors";
 //import { data } from './data.js'
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 import mongoose from 'mongoose';
 var Schema = mongoose.Schema;
 var con;
