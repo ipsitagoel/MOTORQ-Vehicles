@@ -46,7 +46,6 @@
   width: 200px;
   justify-content: space-between;
   align-items: center;
-  border-radius: 20px;
 }
 
 .vehicle-table-search-select-inner {
@@ -66,14 +65,14 @@
 }
 
 .vehicle-table-search-select-element:hover {
-  background-color: rgb(67, 43, 110) !important;
+  background-color: rgb(67, 43, 110);
   color: white;
   font-family: sans-serif;
   font-weight: bold;
 }
 
 .vehicle-table-search-select-inner:hover {
-  background-color: rgb(201, 200, 202) !important;
+  background-color: rgb(201, 200, 202);
   color: white;
   font-family: sans-serif;
   font-weight: bold;
