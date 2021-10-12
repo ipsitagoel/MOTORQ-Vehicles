@@ -93,16 +93,16 @@ function Vehicles() {
                     </option>
                 </select>
                 </div>
-                {(selectSearch==='count') && <motion.div initial={{opacity:0}} animate={{opacity:1}} transition={{duration: 0.5, delay: dataFetch*0.3}} className='vehicle-table-search-element'><input type='text' ref={countRef} placeholder='select no. of vehicles'/>
+                {(selectSearch==='Count') && <motion.div initial={{opacity:0}} animate={{opacity:1}} transition={{duration: 0.5, delay: dataFetch*0.3}} className='vehicle-table-search-element'><input type='text' ref={countRef} placeholder='select no. of vehicles'/>
                 <button onClick={ () => search('count',countRef.current.value) } >Search</button>
                 </motion.div>}
-                {(selectSearch==='vin') && <motion.div initial={{opacity:0}} animate={{opacity:1}} transition={{duration: 0.5, delay: dataFetch*0.3}} className='vehicle-table-search-element'><input type='text' ref={vinSearchRef} placeholder='vin no.' />
+                {(selectSearch==='VIN') && <motion.div initial={{opacity:0}} animate={{opacity:1}} transition={{duration: 0.5, delay: dataFetch*0.3}} className='vehicle-table-search-element'><input type='text' ref={vinSearchRef} placeholder='vin no.' />
                 <button onClick={ () => search('vin',vinSearchRef.current.value) }>Search</button>
                 </motion.div>}
-                {(selectSearch==='driver') && <motion.div initial={{opacity:0}} animate={{opacity:1}} transition={{duration: 0.5, delay: dataFetch*0.3}} className='vehicle-table-search-element'><input type='text' ref={driverSearchRef} placeholder='driver name' />
+                {(selectSearch==='Driver') && <motion.div initial={{opacity:0}} animate={{opacity:1}} transition={{duration: 0.5, delay: dataFetch*0.3}} className='vehicle-table-search-element'><input type='text' ref={driverSearchRef} placeholder='driver name' />
                 <button onClick={ () => search('driver',driverSearchRef.current.value) }>Search</button>
                 </motion.div>}
-                {(selectSearch==='licence') && <motion.div initial={{opacity:0}} animate={{opacity:1}} transition={{duration: 0.5, delay: dataFetch*0.3}} className='vehicle-table-search-element'><input type='text' ref={licenceSearchRef} placeholder='licence plate' />
+                {(selectSearch==='Licence') && <motion.div initial={{opacity:0}} animate={{opacity:1}} transition={{duration: 0.5, delay: dataFetch*0.3}} className='vehicle-table-search-element'><input type='text' ref={licenceSearchRef} placeholder='licence plate' />
                 <button onClick={ () => search('plate',licenceSearchRef.current.value) }>Search</button>
                 </motion.div>}
                 <div><button onClick={() => resetSearch()}>Reset</button></div>
