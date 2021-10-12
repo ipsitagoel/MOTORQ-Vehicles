@@ -46,10 +46,11 @@
   width: 200px;
   justify-content: space-between;
   align-items: center;
+  border-radius: 20px;
 }
 
 .vehicle-table-search-select-inner {
-  background-color: rgb(51, 33, 85);
+  background-color: #14173D;
   color: white;
   border: 0px;
   padding: 10px;
@@ -58,7 +59,7 @@
 }
 
 .vehicle-table-search-select-element {
-  background-color: rgb(51, 33, 85);
+  background-color: #14173D;
   color: white;
   font-family: sans-serif;
   font-weight: bold;
@@ -72,7 +73,7 @@
 }
 
 .vehicle-table-search-select-inner:hover {
-  background-color: rgb(67, 43, 110) !important;
+  background-color: rgb(201, 200, 202) !important;
   color: white;
   font-family: sans-serif;
   font-weight: bold;
@@ -138,7 +139,7 @@
   color: #F7544D;
   padding-top: 5px;
   padding-bottom: 5px;
-  width: 105px;
+  width: 95px;
 }
 
 .vehicle-table-inner{
